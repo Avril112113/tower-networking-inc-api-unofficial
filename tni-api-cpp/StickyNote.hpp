@@ -1,10 +1,20 @@
-#ifndef TN_API_HEADER_STICKYNOTE
-#define TN_API_HEADER_STICKYNOTE
+#ifndef TNI_API_HEADER_STICKYNOTE
+#define TNI_API_HEADER_STICKYNOTE
+// Generated API for game version 0.9.1
+// If any constants or enum's change between versions, a rebuild of your mod will with updated headers may be required!
 
 #include <api.hpp>
 
 struct StickyNote : public Area2D {
 	using Area2D::Area2D;
+
+	enum StickyColor : int64_t {  // NOTE: You may need to recompile your mod if this enum changes!
+		YELLOW = 0,
+		RED = 1,
+		GREEN = 2,
+		BLUE = 3,
+		PURPLE = 4,
+	};
 
 	StickyNote(Variant variant) : StickyNote{variant.as_object().address()} {}
 

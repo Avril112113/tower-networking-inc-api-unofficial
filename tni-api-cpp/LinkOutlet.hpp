@@ -1,10 +1,17 @@
-#ifndef TN_API_HEADER_LINKOUTLET
-#define TN_API_HEADER_LINKOUTLET
+#ifndef TNI_API_HEADER_LINKOUTLET
+#define TNI_API_HEADER_LINKOUTLET
+// Generated API for game version 0.9.1
+// If any constants or enum's change between versions, a rebuild of your mod will with updated headers may be required!
 
 #include <api.hpp>
 
 struct LinkOutlet : public Area2D {
 	using Area2D::Area2D;
+
+	enum LinkOutletType : int64_t {  // NOTE: You may need to recompile your mod if this enum changes!
+		COPPER = 0,
+		FIBER = 1,
+	};
 
 	LinkOutlet(Variant variant) : LinkOutlet{variant.as_object().address()} {}
 

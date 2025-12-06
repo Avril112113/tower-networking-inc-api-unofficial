@@ -1,10 +1,13 @@
-#ifndef TN_API_HEADER_TOWERNETWORKLINK
-#define TN_API_HEADER_TOWERNETWORKLINK
+#ifndef TNI_API_HEADER_TOWERNETWORKLINK
+#define TNI_API_HEADER_TOWERNETWORKLINK
+// Generated API for game version 0.9.1
+// If any constants or enum's change between versions, a rebuild of your mod will with updated headers may be required!
 
 #include <api.hpp>
 
 struct TowerNetworkLink : public Node {
 	using Node::Node;
+
 
 	TowerNetworkLink(Variant variant) : TowerNetworkLink{variant.as_object().address()} {}
 

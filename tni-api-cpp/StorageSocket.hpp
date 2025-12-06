@@ -1,10 +1,13 @@
-#ifndef TN_API_HEADER_STORAGESOCKET
-#define TN_API_HEADER_STORAGESOCKET
+#ifndef TNI_API_HEADER_STORAGESOCKET
+#define TNI_API_HEADER_STORAGESOCKET
+// Generated API for game version 0.9.1
+// If any constants or enum's change between versions, a rebuild of your mod will with updated headers may be required!
 
 #include <api.hpp>
 
 struct StorageSocket : public Area2D {
 	using Area2D::Area2D;
+
 
 	StorageSocket(Variant variant) : StorageSocket{variant.as_object().address()} {}
 

@@ -1,10 +1,17 @@
-#ifndef TN_API_HEADER_LOGICCONTROLLERUSER
-#define TN_API_HEADER_LOGICCONTROLLERUSER
+#ifndef TNI_API_HEADER_LOGICCONTROLLERUSER
+#define TNI_API_HEADER_LOGICCONTROLLERUSER
+// Generated API for game version 0.9.1
+// If any constants or enum's change between versions, a rebuild of your mod will with updated headers may be required!
 
 #include <api.hpp>
 
 struct LogicControllerUser : public Node {
 	using Node::Node;
+
+	enum PaymentCalculationMethod : int64_t {  // NOTE: You may need to recompile your mod if this enum changes!
+		USAGE_FULFILMENT_TODAY = 0,
+		LOWEST_SATIETY_TODAY = 1,
+	};
 
 	LogicControllerUser(Variant variant) : LogicControllerUser{variant.as_object().address()} {}
 

@@ -1,10 +1,21 @@
-#ifndef TN_API_HEADER_CABLE
-#define TN_API_HEADER_CABLE
+#ifndef TNI_API_HEADER_CABLE
+#define TNI_API_HEADER_CABLE
+// Generated API for game version 0.9.1
+// If any constants or enum's change between versions, a rebuild of your mod will with updated headers may be required!
 
 #include <api.hpp>
 
 struct Cable : public Node2D {
 	using Node2D::Node2D;
+
+	static constexpr int64_t ZINDEX = 1000;  // NOTE: You may need to recompile your mod if this value changes!
+	static constexpr int64_t TOUT_TICK_TOLERANCE = 10;  // NOTE: You may need to recompile your mod if this value changes!
+	PROPERTY(CablePieceScene10, Variant);  // Cosnt value type was not supported.
+	PROPERTY(CablePieceScene30, Variant);  // Cosnt value type was not supported.
+	PROPERTY(CablePieceScene50, Variant);  // Cosnt value type was not supported.
+	PROPERTY(CablePieceScene25, Variant);  // Cosnt value type was not supported.
+	static constexpr double DELAY_TIMER_FLT = 0.3;  // NOTE: You may need to recompile your mod if this value changes!
+	static constexpr double LINVELT = 5.0;  // NOTE: You may need to recompile your mod if this value changes!
 
 	Cable(Variant variant) : Cable{variant.as_object().address()} {}
 

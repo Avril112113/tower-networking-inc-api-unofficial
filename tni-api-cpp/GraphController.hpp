@@ -1,10 +1,18 @@
-#ifndef TN_API_HEADER_GRAPHCONTROLLER
-#define TN_API_HEADER_GRAPHCONTROLLER
+#ifndef TNI_API_HEADER_GRAPHCONTROLLER
+#define TNI_API_HEADER_GRAPHCONTROLLER
+// Generated API for game version 0.9.1
+// If any constants or enum's change between versions, a rebuild of your mod will with updated headers may be required!
 
 #include <api.hpp>
 
 struct GraphController : public Node {
 	using Node::Node;
+
+	enum Traversal : int64_t {  // NOTE: You may need to recompile your mod if this enum changes!
+		CONTINUE = 0,
+		BREAK = 1,
+		SKIP = 2,
+	};
 
 	GraphController(Variant variant) : GraphController{variant.as_object().address()} {}
 

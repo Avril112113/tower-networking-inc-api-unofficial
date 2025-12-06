@@ -1,10 +1,13 @@
-#ifndef TN_API_HEADER_LOGICCONTROLLERSOCKET
-#define TN_API_HEADER_LOGICCONTROLLERSOCKET
+#ifndef TNI_API_HEADER_LOGICCONTROLLERSOCKET
+#define TNI_API_HEADER_LOGICCONTROLLERSOCKET
+// Generated API for game version 0.9.1
+// If any constants or enum's change between versions, a rebuild of your mod will with updated headers may be required!
 
 #include <api.hpp>
 
 struct LogicControllerSocket : public Area2D {
 	using Area2D::Area2D;
+
 
 	LogicControllerSocket(Variant variant) : LogicControllerSocket{variant.as_object().address()} {}
 
@@ -17,7 +20,7 @@ struct LogicControllerSocket : public Area2D {
 	PROPERTY(up_timestamp, int64_t);
 	PROPERTY(traversal_tc_counts_since_up, Variant);
 	PROPERTY(is_up, bool);
-	// PROPERTY(virtual, bool);
+//	PROPERTY(virtual, bool);
 	PROPERTY(port_num, int64_t);
 	PROPERTY(port_id, String);
 	PROPERTY(bliptimer, Variant);

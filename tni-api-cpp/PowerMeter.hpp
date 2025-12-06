@@ -1,10 +1,13 @@
-#ifndef TN_API_HEADER_POWERMETER
-#define TN_API_HEADER_POWERMETER
+#ifndef TNI_API_HEADER_POWERMETER
+#define TNI_API_HEADER_POWERMETER
+// Generated API for game version 0.9.1
+// If any constants or enum's change between versions, a rebuild of your mod will with updated headers may be required!
 
 #include <api.hpp>
 
 struct PowerMeter : public Area2D {
 	using Area2D::Area2D;
+
 
 	PowerMeter(Variant variant) : PowerMeter{variant.as_object().address()} {}
 

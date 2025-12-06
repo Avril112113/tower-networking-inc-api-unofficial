@@ -1,10 +1,14 @@
-#ifndef TN_API_HEADER_LOCATION
-#define TN_API_HEADER_LOCATION
+#ifndef TNI_API_HEADER_LOCATION
+#define TNI_API_HEADER_LOCATION
+// Generated API for game version 0.9.1
+// If any constants or enum's change between versions, a rebuild of your mod will with updated headers may be required!
 
 #include <api.hpp>
 
 struct Location : public Node2D {
 	using Node2D::Node2D;
+
+	static constexpr int64_t max_height = 5000;  // NOTE: You may need to recompile your mod if this value changes!
 
 	Location(Variant variant) : Location{variant.as_object().address()} {}
 
