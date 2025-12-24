@@ -1,4 +1,7 @@
 # Un-official TNI modding API
+**NOTE; These headers now exist in the offical [TNI mod-kit repo](https://github.com/treefarmer741/Tower-Networking-Inc-modding-kit).**  
+I don't plan on updating the headers here anymore, but I may if it is needed.  
+
 This repo contains generated headers for use with Tower Network Inc's modding.  
 Most of the provided headers are not tested, but some were and they work fine. Feel free to report any issues or suggestions for the headers.  
 Official modding kit repo: [treefarmer741/Tower-Networking-Inc-modding-kit](https://github.com/treefarmer741/Tower-Networking-Inc-modding-kit)  
